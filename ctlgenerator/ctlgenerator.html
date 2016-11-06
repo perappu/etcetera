@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Changeling: The Lost NPC Generator</title>
+</head>
+
+<style>
+body {
+text-align: center;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="changelingtraits.js"></script> 
+<script>
+
+function generate() {
+    //pick a seeming
+    seemings = Object.keys(changelings);
+    seeming = seemings[Math.floor(Math.random()*seemings.length)];
+
+    //pick a kith
+    kiths = Object.keys(changelings[seeming]);
+    kith = kiths[Math.floor(Math.random()*kiths.length)];
+
+    //pick a speciality
+    specialities = ["Mental","Physical","Social"];
+    speciality = specialities[Math.floor(Math.random()*specialities.length)];
+
+    //poop it out
+    $("#seeming").text(seeming);
+    $("#kith").text(kith);
+    $("#speciality").text(speciality);
+    //document.write(seeming + kith + speciality);
+}
+
+$(document).ready(function(){
+$("#btn1").click(function(){
+
+    generate();
+    
+    });
+    });
+</script>
+
+<body>
+
+<strong>Seeming:</strong> <div id="seeming"> </div>
+<br>
+<strong>Kith:</strong> <div id="kith"> </div>
+<br>
+<strong>Speciality:</strong> <div id="speciality"> </div>
+<br>
+<button id="btn1">Generate</button>
+
+</body>
+
+<script>
+generate();
+</script>
+
+</html>
