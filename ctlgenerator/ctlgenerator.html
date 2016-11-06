@@ -23,7 +23,13 @@ function generate() {
     //pick a kith
     kiths = Object.keys(changelings[seeming]);
     kith = kiths[Math.floor(Math.random()*kiths.length)];
+    
+    kithDescription = changelings[seeming][kith];
 
+    //pick a court
+    courts = ["Autumn","Spring","Summer","Winter"];
+    court = courts[Math.floor(Math.random()*courts.length)];
+    
     //pick a speciality
     specialities = ["Mental","Physical","Social"];
     speciality = specialities[Math.floor(Math.random()*specialities.length)];
@@ -31,25 +37,24 @@ function generate() {
     //poop it out
     $("#seeming").text(seeming);
     $("#kith").text(kith);
+    $("#kithDescription").text(kithDescription);
+    $("#court").text(court);
     $("#speciality").text(speciality);
     //document.write(seeming + kith + speciality);
 }
 
-$(document).ready(function(){
-$("#btn1").click(function(){
-
-    generate();
-    
-    });
-    });
+$(document).ready(function(){ $("#btn1").click(function(){ generate(); }); });
 </script>
 
 <body>
-
+<hr>
 <strong>Seeming:</strong> <div id="seeming"> </div>
-<br>
+<hr>
 <strong>Kith:</strong> <div id="kith"> </div>
-<br>
+<div id="kithDescription"> </div>
+<hr>
+<strong>Court:</strong> <div id="court"> </div>
+<hr>
 <strong>Speciality:</strong> <div id="speciality"> </div>
 <br>
 <button id="btn1">Generate</button>
