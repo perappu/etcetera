@@ -7,10 +7,20 @@
      <style>
         body {
             text-align: center;
+            background-color: #FFFFFF;
         }
      </style>
+     
+     <script>
+     function mouseUp() {
+        if (document.body.style.background == "#FFFFFF") {
+            document.body.style.background = "#000000";
+        } else {
+            document.body.style.background = "#FFFFFF";
+        }
+    </script>
 </head>
-<body>
-     <canvas data-processing-sources="test.pde"></canvas>
+<body mouseup="mouseUp()">>
+         <canvas data-processing-sources="test.pde"></canvas>
 </body>
 </html>
