@@ -2,12 +2,13 @@
 <html>
 <head>
      <title>Processing.js Test</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script src="minim.js"></script>
      <script src="processing.min.js"></script>
      <style>
         body {
             text-align: center;
-            background-color: #FFFFFF;
+            background-color: white;
         }
         .container {
             height: 100%;
@@ -18,13 +19,13 @@
      </style>
      
      <script>
-     function mouseUp() {
-            if (document.body.style.background == "#FFFFFF") {
-                document.body.style.background = "#000000";
+     $(".container").mouseup(function(){
+        if ($("body").css("background-color") == "white") {
+                $(body).css("background-color","black");
             } else {
-                document.body.style.background = "#FFFFFF";
+                $(body).css("background-color","white");
             }
-        }
+    });
     </script>
 </head>
 <body>
