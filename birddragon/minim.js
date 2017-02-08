@@ -98,3 +98,5 @@ function canPlayMp3() {
   var a = document.createElement('audio');
   return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
 }
+
+function isPlaying(audelem) { return !audelem.paused; }

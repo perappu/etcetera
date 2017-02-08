@@ -52,7 +52,7 @@ void draw() {
       dragon[currentFrame].display(0, 0);
       player.pause();
       player.rewind();
-          if(!player2.isPlaying()){
+          if(!isPlaying(player2)){
       player2.rewind();        
       player2.play();
             }
@@ -64,7 +64,7 @@ void draw() {
       bird[currentFrame].display(0, 0);
       player2.pause();
       player2.rewind();
-      if(!player.isPlaying()){
+      if(!isPlaying(player)){
         player.rewind();        
         player.play();
       }
