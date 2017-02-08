@@ -9,19 +9,27 @@
             text-align: center;
             background-color: #FFFFFF;
         }
+        .container {
+            height: 100%;
+            width: 100%;
+            z-index: 900;
+            position: fixed;
+        }
      </style>
      
      <script>
      function mouseUp() {
-        if (document.body.style.background == "#FFFFFF") {
-            document.body.style.background = "#000000";
-        } else {
-            document.body.style.background = "#FFFFFF";
-        }
+            if (document.body.style.background == "#FFFFFF") {
+                document.body.style.background = "#000000";
+            } else {
+                document.body.style.background = "#FFFFFF";
+            }
         }
     </script>
 </head>
-<body mouseup="mouseUp()">
+<body>
+<div class="container">
          <canvas data-processing-sources="test.pde"></canvas>
-</body>
+</div>
+         </body>
 </html>
