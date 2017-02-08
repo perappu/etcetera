@@ -10,6 +10,7 @@ boolean toggleDragon = true;
     
 void setup() {
   size(800, 600);
+  background(255, 255, 255);
   frameRate(6);
   
   dragon[0]  = new Animation("dragon1");
