@@ -25,7 +25,7 @@ function AudioPlayer(str) {
     audio.preload = 'auto';
     audio.autobuffer = true;
     if (canPlayOgg()) {
-      audio.src = str.split(".")[0] + ".ogg";
+      audio.src = str.split(".")[0] + ".mp3";
     } else if (canPlayMp3()) {
       audio.src = str;
     }
