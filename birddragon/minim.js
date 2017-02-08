@@ -91,7 +91,7 @@ function AudioPlayer(str) {
 
 function canPlayOgg() {
   var a = document.createElement('audio');
-  return !!(a.canPlayType && a.canPlayType('audio/ogg; codecs="vorbis"').replace(/no/, ''));
+  return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
 }
 
 function canPlayMp3() {
