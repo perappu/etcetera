@@ -25,7 +25,7 @@ function AudioPlayer(str) {
     audio.preload = 'auto';
     audio.autobuffer = true;
     if (canPlayOgg()) {
-      audio.src = str.split(".")[0] + ".mp3";
+      audio.src = str.split(".")[0] + ".ogg";
     } else if (canPlayMp3()) {
       audio.src = str;
     }
@@ -91,7 +91,7 @@ function AudioPlayer(str) {
 
 function canPlayOgg() {
   var a = document.createElement('audio');
-  return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
+  return !!(a.canPlayType && a.canPlayType('audio/ogg; codecs="vorbis"').replace(/no/, ''));
 }
 
 function canPlayMp3() {
