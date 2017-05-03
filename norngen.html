@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Norn Name Generator</title>
+
+<style>
+
+body {
+	background-color: #ADEAEA;
+	text-align: center;
+	font-family:Verdana, Arial, sans-serif; 
+	font-size: 12px;
+}
+
+h1 {
+	font-size:15px;
+}
+
+a {
+
+	color: #4A777A;
+	text-decoration: none;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Norn Name Generator</h1>
+
+<button type="button" onclick="norngen()">Generate</button>
+
+<script>
+function norngen() {
+
+    var name1 = ["Crunch", "Olaf", "Beef", "Chunk", "Smoke", "Brick", "Crash", "Thick", "Bold", "Buff", "Drunk", "Punch", "Crud", "Grizzle", "Slab", "Hack", "Big"];
+	var name2 = ["Mac", "Mc", ""];
+	var name3 = ["Butt", "Steak", "Hard", "Rock", "Large", "Huge", "Beef", "Thrust", "Big", "Bigger", "Meat", "Hard", "Fight", "Fizzle", "Run", "Fast", "Drink", "Lots", "Slam", "Chest", "Groin", "Bone", "Meal", "Thorn", "Body", "Squat"];
+	
+	var n1 = name1[Math.floor(Math.random()*name1.length)];
+	var n2 = name2[Math.floor(Math.random()*name2.length)];
+	var n3 = name3[Math.floor(Math.random()*name3.length)];
+	var n4 = name3[Math.floor(Math.random()*name3.length)];
+	
+	document.getElementById("name").innerHTML = n1 + " " + n2 + n3 + n4.toLowerCase();
+	
+}
+</script>
+
+<p id="name">
+<br></p>
+
+<sub>brought to you by <a href="http://stokori.us">stokori</a> & inspired by MST3K</sub>
+
+</body>
+</html>
