@@ -1,0 +1,52 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<p>Really Basic Junker Calculator</p>
+this may be the laziest thing i have ever coded
+
+<p>Number of Slots: <input type="text" id="slots"></p>
+Percentages:<br>
+Chemical: <input type="text" id="chemical" value="0"><br>
+Electronic: <input type="text" id="electronic" value="0"><br>
+Mechanical: <input type="text" id="mechanical" value="0"><br>
+Structural: <input type="text" id="structural" value="0"><br>
+
+<button id="generate">do it</button>
+
+<p>Materials Needed:</p>
+<div id="result">
+</div>
+</body>
+
+<script>
+
+function theThing() {
+        
+            output = "";
+            $("#result").html(output);
+            
+            slots = parseInt($('#slots').val())/100;
+			chemical = Math.ceil(slots*parseInt($('#chemical').val()));
+			electronic = Math.ceil(slots*parseInt($('#chemical').val()));
+			mechanical = Math.ceil(slots*parseInt($('#mechanical').val()));
+			structural = Math.ceil(slots*parseInt($('#structural').val()));
+			
+			output = "Chemical: " + chemical + "<br> Electronic: " + electronic + "<br> Mechanical: " + mechanical + "<br> Structural: " + structural;
+			
+			$("#result").html(output);
+        
+        }
+
+$(document).ready(function(){ 
+        
+            $("#generate").click(function(){ theThing(); });
+            
+            
+            $(".container").show();
+            
+        });
+</script>
+
+</html>
