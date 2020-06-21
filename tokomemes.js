@@ -30,7 +30,5 @@ var objects=new Array(),winOffset=0,winHeight,winWidth,togvis,moz=(document.getE
 for (i=0;i<numObjs;i++){fallObject(i,parseInt(Math.random()*fallObjects.length),1);}
 window.onscroll=winOfy;window.onresize=winSize;fall();
 
-var par = document.getElementsByClassName("profile-body")[0]; 
-var newEl = document.createElement("p"); 
-newEl.innerHTML = "<div style='text-align:center;margin:1%;'><sub>click play for the intended toko profile experience:<br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/tokomeme.mp3?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br>(no sorry you can't have this on your page)</sub></div>";
-par.appendChild(newEl); 
+
+$('.nav.nav-tabs.margin-2em').append("<div style='text-align:center;margin:1%;'><sub>click play for the intended toko profile experience:<br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/tokomeme.mp3?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br>(no sorry you can't have this on your page)</sub></div>");
