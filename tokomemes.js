@@ -5,10 +5,10 @@ var fallObjects=new Array();function newObject(url,height,width){fallObjects[fal
 ///////////// EDIT THIS SECTION //////////////
 var numObjs=5, waft=50, fallSpeed=15, wind=0;
 newObject("https://i.imgur.com/31ydD5P.png",28,25);
-newObject("https://i.imgur.com/31ydD5P.png",28,25);
-newObject("https://i.imgur.com/31ydD5P.png",28,25);
-newObject("https://i.imgur.com/31ydD5P.png",21,21);
-newObject("https://i.imgur.com/31ydD5P.png",21,21);
+//newObject("https://i.imgur.com/31ydD5P.png",28,25);
+//newObject("https://i.imgur.com/31ydD5P.png",28,25);
+//newObject("https://i.imgur.com/31ydD5P.png",21,21);
+//newObject("https://i.imgur.com/31ydD5P.png",21,21);
 //////////////////////////////////////////////
 
 function winSize(){winWidth=(moz)?window.innerWidth:document.body.clientWidth;winHeight=(moz)?window.innerHeight:document.body.clientHeight;}
