@@ -31,3 +31,4 @@ for (i=0;i<numObjs;i++){fallObject(i,parseInt(Math.random()*fallObjects.length),
 window.onscroll=winOfy;window.onresize=winSize;fall();
 
 
+$('.profile-description').prepend("<div style='text-align:center'><sub>click play for the intended toko profile experience:<br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/tokomeme.mp3?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br>(no sorry you can't have this on your page)</sub></div>");
