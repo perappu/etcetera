@@ -30,5 +30,7 @@ var objects=new Array(),winOffset=0,winHeight,winWidth,togvis,moz=(document.getE
 for (i=0;i<numObjs;i++){fallObject(i,parseInt(Math.random()*fallObjects.length),1);}
 window.onscroll=winOfy;window.onresize=winSize;fall();
 
+var midis = ["tokomeme.mp3","tokomeme2.mp3","tokomeme3.mp3"];
 
-$('.nav.nav-tabs.margin-2em').after("<div class='tokoaudiomeme'><sub>click play for the intended toko profile experience:</sub><br><br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/tokomeme.mp3?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br><br><sub>(no sorry you can't have this on your page)</sub></div>");
+$('.nav.nav-tabs.margin-2em').after("<div class='tokoaudiomeme'><sub>click play for the intended toko profile experience:</sub><br><br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/" +
+midis[Math.floor(Math.random() * midis.length)]; + "?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br><sub>(no sorry you can't have this on your page)</sub></div>");
