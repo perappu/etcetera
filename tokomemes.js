@@ -32,5 +32,6 @@ window.onscroll=winOfy;window.onresize=winSize;fall();
 
 var midis = ["tokomeme.mp3","tokomeme2.mp3","tokomeme3.mp3"];
 
-$('.nav.nav-tabs.margin-2em').after("<div class='tokoaudiomeme'><sub>click play for the intended toko profile experience:</sub><br><br><audio controls preload='metadata' style='width:300px;'><source src='https://github.com/stokori/etcetera/blob/master/" +
-midis[Math.floor(Math.random() * midis.length)] + "?raw=true' type='audio/mpeg'>Your browser does not support the audio element.</audio><br><sub>(no sorry you can't have this on your page)</sub></div>");
+var midiURL = "https://github.com/stokori/etcetera/blob/master/" + midis[Math.floor(Math.random() * midis.length)] + "?raw=true";
+
+$(".nav.nav-tabs.margin-2em").after("<div class='tokoaudiomeme'><sub>click play for the intended toko profile experience:</sub><br><br><audio controls preload='metadata' style='width:300px;'><source src='" + midiURL "' type='audio/mpeg'>Your browser does not support the audio element.</audio><br><sub>(no sorry you can't have this on your page)</sub></div>");
