@@ -19,8 +19,8 @@ function newObject(url, height, width) {
 
 ///////////// EDIT THIS SECTION //////////////
 var numObjs = 5,
-	waft = 50,
-	fallSpeed = 15,
+	waft = 20,
+	fallSpeed = 4,
 	wind = 0;
 newObject("https://i.imgur.com/5Xshc5x.png", 28, 25);
 newObject("https://i.imgur.com/5Xshc5x.png", 28, 25);
