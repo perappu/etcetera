@@ -1,5 +1,7 @@
 // Fall v2.1 By MaxxBlade - http://www.maxxblade.co.uk/fall
+
 var fallObjects=new Array();function newObject(url,height,width){fallObjects[fallObjects.length]=new Array(url,height,width);}
+
 ///////////// EDIT THIS SECTION //////////////
 var numObjs=5, waft=50, fallSpeed=15, wind=0;
 newObject("https://i.imgur.com/5Xshc5x.png",28,25);
