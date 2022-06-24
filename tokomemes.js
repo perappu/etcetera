@@ -1,4 +1,15 @@
-// Fall v2.1 By MaxxBlade - http://www.maxxblade.co.uk/fall
+function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}    
+
+// Fall v2.1 By MaxxBlade - http://www.maxxblade.co.uk/fall and then edited a lot by toko
+
 
 var fallObjects = [];
 
@@ -55,6 +66,9 @@ winSize();
 for (i = 0; i < numObjs; i++) {
 	fallObject(i, parseInt(Math.random() * fallObjects.length), 1);
 }
-window.onscroll = winOfy;
-window.onresize = winSize;
-fall();
+
+docReady(function() {
+	window.onscroll = winOfy;
+	window.onresize = winSize;
+	fall();
+});
